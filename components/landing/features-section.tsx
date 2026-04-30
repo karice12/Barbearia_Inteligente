@@ -1,5 +1,5 @@
-import { Calendar, MessageSquare, DollarSign, Clock, TrendingUp, Shield } from 'lucide-react'
-import { Card, CardContent } from '@/components/ui/card'
+import { Calendar, MessageSquare, DollarSign, Clock, TrendingUp, Shield } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
 
 const features = [
   {
@@ -74,27 +74,27 @@ export function FeaturesSection() {
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, index) => {
-            const Icon = feature.icon
+          {features?.map((feature, index) => {
+            const Icon = feature?.icon
             return (
               <Card
-                key={feature.title}
+                key={feature?.title}
                 className={`group border border-slate-100 bg-white hover:border-orange-200 hover:shadow-xl hover:shadow-orange-500/10 transition-all duration-300 hover:-translate-y-1 animate-fade-up`}
                 style={{ animationDelay: `${index * 0.1}s`, opacity: 0 }}
               >
                 <CardContent className="p-8">
                   <div
-                    className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-200 shadow-lg`}
+                    className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${feature?.gradient} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-200 shadow-lg`}
                   >
                     <Icon className="w-7 h-7 text-white" />
                   </div>
                   <h3 className="font-display text-xl font-bold text-slate-900 mb-2">
-                    {feature.title}
+                    {feature?.title}
                   </h3>
-                  <p className="text-slate-500 leading-relaxed">{feature.description}</p>
+                  <p className="text-slate-500 leading-relaxed">{feature?.description}</p>
                 </CardContent>
               </Card>
-            )
+            );
           })}
         </div>
 
@@ -106,17 +106,17 @@ export function FeaturesSection() {
               { label: 'Agendamentos/mês', value: '190K+' },
               { label: 'Receita gerada', value: 'R$ 12M+' },
               { label: 'Satisfação', value: '4.9/5' },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
+            ]?.map((stat) => (
+              <div key={stat?.label} className="text-center">
                 <p className="font-display text-3xl sm:text-4xl font-black bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
-                  {stat.value}
+                  {stat?.value}
                 </p>
-                <p className="text-slate-400 text-sm mt-1">{stat.label}</p>
+                <p className="text-slate-400 text-sm mt-1">{stat?.label}</p>
               </div>
             ))}
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,7 +1,6 @@
-'use client'
-
-import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
+'use client';
+import Link from'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 import {
   LayoutDashboard,
   CalendarDays,
@@ -11,10 +10,10 @@ import {
   Scissors,
   LogOut,
   ChevronRight,
-} from 'lucide-react'
-import { cn } from '@/lib/utils'
-import { Badge } from '@/components/ui/badge'
-import { useAuth, rolePermissions } from '@/lib/auth-context'
+} from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { Badge } from '@/components/ui/badge';
+import { useAuth, rolePermissions } from '@/lib/auth-context';
 
 const allNavItems = [
   { href: '/dashboard', label: 'Visão Geral', icon: LayoutDashboard, badge: null, permission: null },

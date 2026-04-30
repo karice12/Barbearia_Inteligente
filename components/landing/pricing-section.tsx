@@ -1,13 +1,12 @@
-'use client'
-
-import { useState } from 'react'
-import { Check, X, Zap, Crown } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-import { Switch } from '@/components/ui/switch'
-import { cn } from '@/lib/utils'
-import { pricingPlans } from '@/lib/mock-data'
-import { toast } from 'sonner'
+'use client';
+import { useState } from 'react';
+import { Check, X, Zap, Crown } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Switch } from '@/components/ui/switch';
+import { cn } from '@/lib/utils';
+import { pricingPlans } from '@/lib/mock-data';
+import { toast } from 'sonner';
 
 export function PricingSection() {
   const [isAnnual, setIsAnnual] = useState(false)
@@ -85,8 +84,7 @@ export function PricingSection() {
                     className={cn(
                       'w-10 h-10 rounded-xl flex items-center justify-center',
                       isPro
-                        ? 'bg-gradient-to-br from-orange-500 to-amber-500'
-                        : 'bg-blue-50'
+                        ? 'bg-gradient-to-br from-orange-500 to-amber-500' :'bg-blue-50'
                     )}
                   >
                     {isPro ? (

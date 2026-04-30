@@ -1,15 +1,14 @@
-'use client'
+'use client';
+import { useState } from 'react';
+import { CalendarDays, Clock, User, ChevronLeft, ChevronRight, Plus, Filter } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Topbar } from '@/components/dashboard/topbar';
 
-import { useState } from 'react'
-import { CalendarDays, Clock, User, ChevronLeft, ChevronRight, Plus, Filter } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { Topbar } from '@/components/dashboard/topbar'
-import { NewAppointmentModal } from '@/components/dashboard/new-appointment-modal'
-import { todayAppointments, professionals, type AppointmentStatus, type Appointment } from '@/lib/mock-data'
-import { cn } from '@/lib/utils'
-import { toast } from 'sonner'
+import { todayAppointments, professionals, type AppointmentStatus, type Appointment } from '@/lib/mock-data';
+import { cn } from '@/lib/utils';
+import { toast } from 'sonner';
 
 const statusConfig: Record<AppointmentStatus, { label: string; color: string }> = {
   confirmed: { label: 'Confirmado', color: 'bg-emerald-100 text-emerald-700 border-emerald-200' },
@@ -84,8 +83,7 @@ export default function AgendaPage() {
                       isToday
                         ? 'bg-gradient-to-b from-orange-500 to-amber-500 text-white shadow-md shadow-orange-500/30'
                         : isWeekend
-                        ? 'opacity-40 hover:opacity-60'
-                        : 'hover:bg-slate-100'
+                        ? 'opacity-40 hover:opacity-60' :'hover:bg-slate-100'
                     )}
                   >
                     <span className={cn('text-[10px] font-medium', isToday ? 'text-white/80' : 'text-slate-400')}>
@@ -303,12 +301,8 @@ export default function AgendaPage() {
                               apt
                                 ? currentStatus === 'done'
                                   ? 'bg-slate-100 text-slate-400'
-                                  : currentStatus === 'late'
-                                  ? 'bg-red-100 text-red-700 border border-red-200'
-                                  : currentStatus === 'confirmed'
-                                  ? 'bg-emerald-100 text-emerald-700 border border-emerald-200'
-                                  : 'bg-amber-100 text-amber-700 border border-amber-200'
-                                : 'bg-slate-50 border border-dashed border-slate-200 text-slate-300'
+                                  : currentStatus === 'late' ?'bg-red-100 text-red-700 border border-red-200'
+                                  : currentStatus === 'confirmed' ?'bg-emerald-100 text-emerald-700 border border-emerald-200' :'bg-amber-100 text-amber-700 border border-amber-200' :'bg-slate-50 border border-dashed border-slate-200 text-slate-300'
                             )}
                           >
                             {apt ? apt.clientName.split(' ')[0] : ''}

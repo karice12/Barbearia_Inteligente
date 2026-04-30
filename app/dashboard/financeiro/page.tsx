@@ -1,22 +1,18 @@
-'use client'
-
-import { useState } from 'react'
+'use client';
+import { useState } from 'react';
 import {
   DollarSign, TrendingUp, TrendingDown, Wallet,
   CreditCard, Smartphone, Banknote, Award,
-} from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { Progress } from '@/components/ui/progress'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { Topbar } from '@/components/dashboard/topbar'
-import { transactions, commissions, kpis, professionals } from '@/lib/mock-data'
-import { cn } from '@/lib/utils'
-import {
-  BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip,
-  PieChart, Pie, Cell, Legend,
-} from 'recharts'
+} from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Progress } from '@/components/ui/progress';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Topbar } from '@/components/dashboard/topbar';
+import { transactions, commissions, kpis, professionals } from '@/lib/mock-data';
+import { cn } from '@/lib/utils';
+import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip, PieChart, Pie, Cell,  } from 'recharts';
 
 const weekData = [
   { day: 'Seg', income: 920, expense: 80 },
@@ -233,9 +229,7 @@ export default function FinanceiroPage() {
                         key={txn.id}
                         className={cn(
                           'flex items-center gap-4 p-4 rounded-xl border transition-all duration-200 hover:shadow-sm',
-                          txn.type === 'income'
-                            ? 'border-slate-100 bg-white hover:border-emerald-100'
-                            : 'border-red-100 bg-red-50/40 hover:border-red-200'
+                          txn.type === 'income' ?'border-slate-100 bg-white hover:border-emerald-100' :'border-red-100 bg-red-50/40 hover:border-red-200'
                         )}
                       >
                         {/* Icon */}

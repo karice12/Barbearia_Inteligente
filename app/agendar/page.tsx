@@ -1,15 +1,14 @@
-'use client'
-
-import { useState } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { ArrowLeft, ArrowRight, Check, Scissors, Clock, Star, Phone, User, CalendarDays, CheckCircle2, ChevronLeft } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Badge } from '@/components/ui/badge'
-import { cn } from '@/lib/utils'
-import { services, professionals, availableSlots, type Service, type Professional } from '@/lib/mock-data'
-import { toast } from 'sonner'
+'use client';
+import { useState } from 'react';
+ import Image from'next/image';
+ import Link from'next/link';
+import { ArrowLeft, ArrowRight, Check, Scissors, Clock, Star, Phone, User, CalendarDays, CheckCircle2, ChevronLeft } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Badge } from '@/components/ui/badge';
+import { cn } from '@/lib/utils';
+import { services, professionals, availableSlots, type Service, type Professional } from '@/lib/mock-data';
+import { toast } from 'sonner';
 
 type Step = 1 | 2 | 3 | 4
 

@@ -1,14 +1,13 @@
-'use client'
-
-import { useState, FormEvent } from 'react'
-import { useRouter } from 'next/navigation'
-import Link from 'next/link'
-import { Eye, EyeOff, Scissors, AlertCircle, Check } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-import { useAuth, type UserRole, roleLabels } from '@/lib/auth-context'
-import { cn } from '@/lib/utils'
+'use client';
+import { useState, FormEvent } from 'react';
+import { useRouter } from 'next/navigation';
+ import Link from'next/link';
+import { Eye, EyeOff, Scissors, AlertCircle, Check } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { useAuth, type UserRole } from '@/lib/auth-context';
+import { cn } from '@/lib/utils';
 
 export default function RegisterPage() {
   const { register } = useAuth()
@@ -133,8 +132,7 @@ export default function RegisterPage() {
                     className={cn(
                       'relative p-3 rounded-xl border-2 text-left transition-all duration-200',
                       role === r.value
-                        ? 'border-orange-400 bg-orange-50'
-                        : 'border-slate-200 hover:border-slate-300 bg-white'
+                        ? 'border-orange-400 bg-orange-50' :'border-slate-200 hover:border-slate-300 bg-white'
                     )}
                   >
                     {role === r.value && (

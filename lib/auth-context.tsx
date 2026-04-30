@@ -1,6 +1,5 @@
-'use client'
-
-import { createContext, useContext, useState, useEffect, useCallback } from 'react'
+'use client';
+import { createContext, useContext, useState, useEffect, useCallback } from 'react';
 
 export type UserRole = 'owner' | 'barber' | 'receptionist'
 

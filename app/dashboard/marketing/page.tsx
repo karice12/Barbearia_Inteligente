@@ -1,18 +1,17 @@
-'use client'
-
-import { useState } from 'react'
+'use client';
+import { useState } from 'react';
 import {
   MessageSquare, Clock, TrendingUp, Gift, Send, Users,
   Flame, Star, ChevronRight, Check,
-} from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { Progress } from '@/components/ui/progress'
-import { Topbar } from '@/components/dashboard/topbar'
-import { inactiveClients, allClients } from '@/lib/mock-data'
-import { cn } from '@/lib/utils'
-import { toast } from 'sonner'
+} from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Progress } from '@/components/ui/progress';
+import { Topbar } from '@/components/dashboard/topbar';
+import { inactiveClients, allClients } from '@/lib/mock-data';
+import { cn } from '@/lib/utils';
+import { toast } from 'sonner';
 
 const campaigns = [
   {
@@ -155,8 +154,7 @@ export default function MarketingPage() {
                     className={cn(
                       'flex items-center gap-3 p-3 rounded-xl border transition-all duration-200',
                       isUrgent
-                        ? 'border-red-100 bg-red-50/60 hover:border-red-200'
-                        : 'border-slate-100 bg-white hover:border-orange-100',
+                        ? 'border-red-100 bg-red-50/60 hover:border-red-200' :'border-slate-100 bg-white hover:border-orange-100',
                       isSent && 'opacity-60'
                     )}
                   >
@@ -207,8 +205,7 @@ export default function MarketingPage() {
                       className={cn(
                         'flex-shrink-0 h-8 text-xs px-3 gap-1.5 rounded-lg transition-all duration-200',
                         isSent
-                          ? 'bg-emerald-100 text-emerald-700 hover:bg-emerald-100 cursor-default'
-                          : 'bg-orange-500 hover:bg-orange-600 text-white shadow-sm hover:scale-105 active:scale-95'
+                          ? 'bg-emerald-100 text-emerald-700 hover:bg-emerald-100 cursor-default' :'bg-orange-500 hover:bg-orange-600 text-white shadow-sm hover:scale-105 active:scale-95'
                       )}
                       onClick={() => !isSent && handleSend(client.id, client.name)}
                       disabled={isSent}

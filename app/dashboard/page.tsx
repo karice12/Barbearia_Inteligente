@@ -1,20 +1,15 @@
-'use client'
-
-import { useState } from 'react'
-import {
-  DollarSign, CalendarCheck, TrendingUp, Users,
-  Clock, Check, AlertCircle, Timer, ChevronRight,
-  Flame,
-} from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { Progress } from '@/components/ui/progress'
-import { Topbar } from '@/components/dashboard/topbar'
-import { cn } from '@/lib/utils'
-import { kpis, todayAppointments, waitingList, type AppointmentStatus } from '@/lib/mock-data'
-import { toast } from 'sonner'
-import { AreaChart, Area, XAxis, YAxis, ResponsiveContainer, Tooltip } from 'recharts'
+'use client';
+import { useState } from 'react';
+import { DollarSign, CalendarCheck, TrendingUp, Users, Check, AlertCircle, Timer, ChevronRight, Flame,  } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Progress } from '@/components/ui/progress';
+import { Topbar } from '@/components/dashboard/topbar';
+import { cn } from '@/lib/utils';
+import { kpis, todayAppointments, waitingList, type AppointmentStatus } from '@/lib/mock-data';
+import { toast } from 'sonner';
+import { AreaChart, Area, XAxis, YAxis, ResponsiveContainer, Tooltip } from 'recharts';
 
 const revenueData = [
   { hour: '9h', value: 125 },
@@ -116,8 +111,7 @@ export default function DashboardPage() {
                       className={cn(
                         'text-xs font-semibold px-2 py-1 rounded-full',
                         kpi.trendUp
-                          ? 'text-emerald-700 bg-emerald-100'
-                          : 'text-red-700 bg-red-100'
+                          ? 'text-emerald-700 bg-emerald-100' :'text-red-700 bg-red-100'
                       )}
                     >
                       {kpi.trend}
@@ -252,8 +246,7 @@ export default function DashboardPage() {
                       isLate
                         ? 'border-red-200 bg-red-50 animate-pulse-red'
                         : isDone
-                        ? 'border-slate-100 bg-slate-50 opacity-60'
-                        : 'border-slate-100 bg-white hover:border-orange-200 hover:bg-orange-50/30'
+                        ? 'border-slate-100 bg-slate-50 opacity-60' :'border-slate-100 bg-white hover:border-orange-200 hover:bg-orange-50/30'
                     )}
                   >
                     {/* Time */}
