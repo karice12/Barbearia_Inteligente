@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import { Scissors } from 'lucide-react'
+import Link from 'next/link';
+import { Scissors } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -25,7 +25,7 @@ export function Footer() {
           <div className="flex flex-wrap gap-x-10 gap-y-4">
             <div className="space-y-2">
               <p className="text-slate-300 font-semibold text-sm">Produto</p>
-              {['Funcionalidades', 'Planos', 'Atualizações'].map((item) => (
+              {['Funcionalidades', 'Planos', 'Atualizações']?.map((item) => (
                 <p key={item}>
                   <Link href="#" className="text-slate-500 hover:text-slate-300 text-sm transition-colors">
                     {item}
@@ -35,7 +35,7 @@ export function Footer() {
             </div>
             <div className="space-y-2">
               <p className="text-slate-300 font-semibold text-sm">Empresa</p>
-              {['Sobre', 'Blog', 'Contato'].map((item) => (
+              {['Sobre', 'Blog', 'Contato']?.map((item) => (
                 <p key={item}>
                   <Link href="#" className="text-slate-500 hover:text-slate-300 text-sm transition-colors">
                     {item}
@@ -45,7 +45,7 @@ export function Footer() {
             </div>
             <div className="space-y-2">
               <p className="text-slate-300 font-semibold text-sm">Legal</p>
-              {['Privacidade', 'Termos', 'LGPD'].map((item) => (
+              {['Privacidade', 'Termos', 'LGPD']?.map((item) => (
                 <p key={item}>
                   <Link href="#" className="text-slate-500 hover:text-slate-300 text-sm transition-colors">
                     {item}
@@ -58,7 +58,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-slate-600 text-sm">
-            &copy; {new Date().getFullYear()} BarberPro. Todos os direitos reservados.
+            &copy; {new Date()?.getFullYear()} BarberPro. Todos os direitos reservados.
           </p>
           <p className="text-slate-600 text-sm">
             Feito com dedicação para barbeeiros brasileiros
@@ -66,5 +66,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

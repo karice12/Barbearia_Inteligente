@@ -1,21 +1,17 @@
-'use client'
-
-import { useState } from 'react'
-import {
-  Store, User, Clock, Bell, Shield, Palette,
-  Plus, Trash2, Save, ChevronRight, Scissors,
-} from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-import { Switch } from '@/components/ui/switch'
-import { Separator } from '@/components/ui/separator'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { Topbar } from '@/components/dashboard/topbar'
-import { professionals, services } from '@/lib/mock-data'
-import { toast } from 'sonner'
+'use client';
+import { useState } from 'react';
+import { Store, User, Clock, Bell, Shield, Plus, Trash2, Save, ChevronRight, Scissors,  } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Switch } from '@/components/ui/switch';
+import { Separator } from '@/components/ui/separator';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Topbar } from '@/components/dashboard/topbar';
+import { professionals, services } from '@/lib/mock-data';
+import { toast } from 'sonner';
 
 const workingHours = [
   { day: 'Segunda', open: '09:00', close: '18:00', active: true },

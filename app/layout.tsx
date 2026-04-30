@@ -1,9 +1,9 @@
-import type { Metadata } from 'next'
-import { Inter, Poppins } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
-import { Toaster } from '@/components/ui/sonner'
-import { AuthProvider } from '@/lib/auth-context'
-import './globals.css'
+import type { Metadata } from 'next';
+import { Inter, Poppins } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
+import { Toaster } from '@/components/ui/sonner';
+import { AuthProvider } from '@/lib/auth-context';
+ import'./globals.css'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -36,7 +36,9 @@ export default function RootLayout({
           <Toaster richColors position="top-right" />
           {process.env.NODE_ENV === 'production' && <Analytics />}
         </AuthProvider>
-      </body>
+
+        <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fbarbearia1689back.builtwithrocket.new&_be=https%3A%2F%2Fappanalytics.rocket.new&_v=0.1.18" />
+        <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.2" /></body>
     </html>
   )
 }

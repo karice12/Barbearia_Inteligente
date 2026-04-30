@@ -1,10 +1,9 @@
-'use client'
-
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { Scissors, Menu, X } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
+'use client';
+import { useState, useEffect } from 'react';
+ import Link from'next/link';
+import { Scissors, Menu, X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 
 const navLinks = [
   { href: '#funcionalidades', label: 'Funcionalidades' },

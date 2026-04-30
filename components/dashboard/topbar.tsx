@@ -1,10 +1,9 @@
-'use client'
-
-import { useState } from 'react'
-import { Menu, Bell, ChevronDown, Scissors, ExternalLink } from 'lucide-react'
-import Link from 'next/link'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
+'use client';
+import { useState } from 'react';
+import { Menu, Bell, ChevronDown, Scissors, ExternalLink } from 'lucide-react';
+ import Link from'next/link';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,10 +11,10 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
-import { Sidebar } from './sidebar'
-import { useAuth, roleLabels, type UserRole } from '@/lib/auth-context'
+} from '@/components/ui/dropdown-menu';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sidebar } from './sidebar';
+import { useAuth, roleLabels, type UserRole } from '@/lib/auth-context';
 
 interface TopbarProps {
   title: string

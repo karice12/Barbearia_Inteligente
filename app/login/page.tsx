@@ -1,14 +1,13 @@
-'use client'
-
-import { useState, FormEvent } from 'react'
-import { useRouter } from 'next/navigation'
-import Link from 'next/link'
-import { Eye, EyeOff, Scissors, AlertCircle } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-import { useAuth } from '@/lib/auth-context'
-import { cn } from '@/lib/utils'
+'use client';
+import { useState, FormEvent } from 'react';
+import { useRouter } from 'next/navigation';
+ import Link from'next/link';
+import { Eye, EyeOff, Scissors, AlertCircle } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { useAuth } from '@/lib/auth-context';
+import { cn } from '@/lib/utils';
 
 export default function LoginPage() {
   const { login } = useAuth()
