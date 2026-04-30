@@ -19,7 +19,7 @@ const PROTECTED_ROUTES = ['/dashboard'];
 // Routes that require owner role
 const OWNER_ONLY_ROUTES = ['/dashboard/configuracoes', '/dashboard/financeiro'];
 
-export async function middleware(request: NextRequest) {
+async function middleware(request: NextRequest) {
   injectTokenFromHeader(request);
   let supabaseResponse = NextResponse.next({ request });
 
@@ -93,8 +93,5 @@ export async function middleware(request: NextRequest) {
   return supabaseResponse;
 }
 
-export const config = {
-  matcher: [
-    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
-  ],
-};
+// This file intentionally has no exports.
+// Middleware logic has been moved to proxy.ts
